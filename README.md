@@ -2,6 +2,8 @@
 
 A web application that generates artistic posters with famous quotes, using the [Pollinations](https://pollinations.ai/) APIs. Users can specify an author or receive a random quote. The application uses artificial intelligence to generate both the quote and a custom portrait image in various visual styles.
 
+[Some examples](https://juanrivera126.github.io/Famous-quotes/Famous_quotes.html)
+
 ## Features
 
 - **Text AI Options**: Choose from multiple text generation models:
