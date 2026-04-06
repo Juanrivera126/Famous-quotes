@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Famous Quotes AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-bar">
+        <span>🔑 Pollinations Key</span>
+        <div style="display:flex; gap:0.5rem; flex:1;">
+            <input type="password" id="apiKeyInput" placeholder="plln_sk_..." style="padding: 0.5rem; flex: 1; border-radius: 0.3rem; border: 1px solid #333; background: #000; color: white;">
+            <a href="#" id="authLink" class="auth-btn">Get Key</a>
+        </div>
+    </div>
+
+    <div class="settings-bar">
+        <div class="setting-group">
+            <span class="label-text">Text AI:</span>
+            <select id="textModelSelect">
+                <option value="openai">OpenAI (GPT-5)</option>
+                <option value="mistral">Mistral</option>
+                <option value="deepseek">DeepSeek V3.2</option>
+                <option value="gemini-fast">Gemini 2.5 Flash</option>
+                <option value="gemini-search" selected>Gemini 3 Flash</option>
+            </select>
+        </div>
+
+        <div class="setting-group">
+            <span class="label-text">Image Engine:</span>
+            <select id="modelSelect">
+                <option value="">Loading models...</option>
+            </select>
+        </div>
+
+        <div class="setting-group">
+            <span class="label-text">Visual Style:</span>
+            <select id="styleSelect">
+                <option value="professional photographic portrait" selected>📸 Photographic</option>
+                <option value="hyper-realistic 8k details">💎 Realistic</option>
+                <option value="3D cartoon pixar style">🧸 3D Cartoon</option>
+                <option value="vintage cinematic film photography">🎞️ Vintage Cinema</option>
+                <option value="classical oil painting on canvas">🎨 Classical Oil</option>
+                <option value="artistic charcoal sketch">✏️ Charcoal</option>
+                <option value="cyberpunk neon futuristic city">🌃 Cyberpunk</option>
+                <option value="japanese anime studio ghibli style">⛩️ Anime</option>
+                <option value="watercolor illustration">🖌️ Watercolor</option>
+                <option value="pop art andy warhol style">🌈 Pop Art</option>
+                <option value="steampunk brass and gears">⚙️ Steampunk</option>
+                <option value="retro pixel art 8-bit">👾 Pixel Art</option>
+                <option value="minimalist vector art">📐 Minimalist</option>
+                <option value="surrealist salvador dali style">👁️ Surrealism</option>
+                <option value="vaporwave aesthetic pink blue">🌊 Vaporwave</option>
+                <option value="street art graffiti wall">🧱 Graffiti</option>
+                <option value="claymation plasticine handmade">🧶 Claymation</option>
+                <option value="vintage comic book style">💥 Comic</option>
+                <option value="intricate paper origami art">📄 Origami</option>
+                <option value="gothic dark fantasy illustration">🦇 Gothic</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="chat-box">
+        <div class="messages" id="msgs">
+            <div class="msg ai-msg">Hello! I can search for a quote from a specific person or give you a surprise. Who are you thinking about?</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="authorInput" class="author-input" placeholder="Author name (optional)...">
+            <button class="action-btn" id="mainBtn" onclick="generateQuote()">✨ Create Author Poster</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
